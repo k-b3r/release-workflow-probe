@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "WORKFLOW_COPY=NEW"
+          echo "WORKFLOW_COPY=OLD"
           echo "event=${{ github.event_name }} sha=${{ github.sha }} ref=${{ github.ref }}"
