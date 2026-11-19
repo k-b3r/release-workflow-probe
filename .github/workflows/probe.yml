@@ -1,0 +1,12 @@
+name: probe
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "WORKFLOW_COPY=NEW"
+          echo "event=${{ github.event_name }} sha=${{ github.sha }} ref=${{ github.ref }}"
